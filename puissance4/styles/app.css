@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'The Constellation';
+    src: url('../font/The\ Constellation.ttf');
+}
+
+
+#game table {
+    border: 3px blue outset;
+    background-color: blue;
+}
+
+#game td {
+    width: 2cm;
+    height: 2cm;
+    margin: 0px;
+    padding: 0px;
+    border: 2px blue inset;
+    border-radius: 2cm;
+    background-color: white;
+    cursor: pointer;
+}
+
+#game td.player1 {
+    background-color: red;
+    animation: fall 2s ease-in-out;
+}
+
+#game td.player2 {
+    background-color: yellow;
+    animation: fall 2s ease-in-out;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 900;
+    text-align: center;
+    font-family: 'The Constellation', sans-serif;
+}
+
+p, #get-current-player, #score {
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'The Constellation', sans-serif;
+}
+
+
+.falling-piece {
+    position: relative;
+    top: -100%; /* Initially hidden outside the board */
+    height: 2cm; /* Match the cell height */
+    width: 2cm; /* Match the cell width */
+    animation: fall .5s ease-in-out;
+}
+
+@keyframes fall {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 0;
+    }
+}
+
+button {
+    padding: .3cm;
+    margin: .5rem;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+button:nth-child(1) {
+    background-color: red;
+    color: white;
+    font-family: 'The Constellation', sans-serif;
+    font-size: 18px;
+}
+
+button:nth-child(2) {
+    background-color: greenyellow;
+    color: black;
+    font-family: 'The Constellation', sans-serif;
+    font-size: 18px;
+}
+
+
